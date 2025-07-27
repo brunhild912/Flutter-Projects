@@ -1,0 +1,35 @@
+Sr. No.,Description,Priority
+FR-1,The system shall allow the user to launch the app without logging in.,High
+FR-2,The system shall display an onboarding walkthrough carousel on the first launch.,Medium
+FR-3,The system shall allow the user to skip the onboarding walkthrough at any time.,Low
+FR-4,The system shall allow the user to create a new alarm category.,High
+FR-5,The system shall allow the user to edit an existing alarm category.,Medium
+FR-6,The system shall allow the user to delete an alarm category.,Medium
+FR-7,The system shall allow the user to view a list of all alarm categories.,High
+FR-8,The system shall allow the user to add a sub-alarm to a category.,High
+FR-9,The system shall allow the user to edit an existing sub-alarm.,High
+FR-10,The system shall allow the user to delete a sub-alarm from a category.,High
+FR-11,The system shall allow the user to set a time for each sub-alarm.,High
+FR-12,The system shall allow the user to configure time intervals between sub-alarms.,Medium
+FR-13,The system shall allow the user to assign a custom ringtone to a sub-alarm.,Medium
+FR-14,The system shall allow the user to enable or disable individual sub-alarms.,High
+FR-15,The system shall allow the user to enable or disable an entire alarm category.,Medium
+FR-16,The system shall allow the user to configure snooze settings per sub-alarm.,Medium
+FR-17,The system shall allow the user to enable or disable snooze for sub-alarms.,Medium
+FR-18,The system shall allow the user to set a custom snooze duration.,Medium
+FR-19,The system shall allow the user to label each sub-alarm with a short note.,Low
+FR-20,The system shall allow the user to configure repeat days for each sub-alarm.,Medium
+FR-21,The system shall display a visual timeline of all sub-alarms within a category.,Low
+FR-22,The system shall allow the user to choose from aurora-themed default alarm tones.,Medium
+FR-23,The system shall allow the user to import a custom alarm tone from device storage.,Low
+FR-24,The system shall gradually increase alarm volume using fade-in audio.,Low
+FR-25,The system shall display aurora-themed visual animation during alarm ring.,Low
+FR-26,The system shall dynamically animate the background based on the time of day.,Low
+FR-27,The system shall animate the background based on the active alarm state.,Low
+FR-28,The system shall allow the user to assign a custom icon to an alarm category.,Low
+FR-29,The system shall allow the user to select a preferred aurora color theme.,Low
+FR-30,The system shall allow the user to save tone-category combinations to a personal library.,Low
+FR-31,The system shall allow the user to load tone-category combinations from the library.,Low
+FR-32,The system shall allow the user to export alarm data locally.,Low
+FR-33,The system shall allow the user to import alarm data from a local file.,Low
+FR-34,The system shall allow the user to enable or disable vibration for alarms.,Low
