@@ -1,16 +1,5 @@
-# marriage_ready_quiz
+Marriage Ready Quiz — Flutter MVP
+Overview
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This Flutter app is a lightweight MVP of the Marriage Ready Quiz, allowing users to answer 20 questions, see their overall marriage readiness score, and get a category-wise breakdown.
+This implementation is in line with the paid trial requirements, featuring a clean UI, structured code, and simple state management.
