@@ -1,147 +1,175 @@
-Marriage Ready Quiz — Flutter MVP
-Overview
+# 💍 **Marriage Ready Quiz — Flutter MVP**
 
-This is a Flutter-based MVP for the Marriage Ready Quiz, built as part of a paid trial task.
-The app enables users to:
+> A clean, scalable MVP implementation of the Marriage Ready Quiz
+> 
+> 
+> Built as part of the **paid trial task** — designed for clarity, maintainability, and a smooth user experience.
+> 
 
-Enter their age and optional email.
+---
 
-Complete a 20-question quiz, with answers mapped to a percentage score.
+## 🚀 **Overview**
 
-View a total readiness score and category-wise breakdown with clear labels and progress indicators.
+This **Flutter-based app** lets users:
 
-The implementation focuses on clean architecture, simple but scalable state management, and a smooth user experience.
+- ✍️ **Enter their age and optional email**
+- 📝 **Complete a 20-question quiz** with answers mapped to percentage scores
+- 📊 **View their total readiness score and category breakdown**
+- 🎯 Receive a **personalized, encouraging message** based on their results
 
-Build & Run Instructions
-Requirements
+The build focuses on **simplicity**, **clean architecture**, and **future scalability**.
 
-Flutter (latest stable channel)
+---
 
-Android Studio, Xcode, or VS Code with Flutter extension
+## 🛠️ **Tech Stack**
 
-Device or emulator for testing
+- **Flutter** — cross-platform framework
+- **Riverpod** — state management for clean, reactive state
+- **Material 3 Design** — for a modern and consistent UI
 
-Steps
-# 1. Clone the private repo
+---
+
+## 🧑‍💻 **Build & Run Instructions**
+
+### **Requirements**
+
+- Flutter (latest **stable** channel)
+- Android Studio, VS Code, or Xcode (with Flutter plugins)
+- Emulator or physical device for testing
+
+### **Steps**
+
+```bash
+# 1️⃣ Clone the private repository
 git clone <PRIVATE_REPO_URL>
 cd marriage_ready_quiz
 
-# 2. Clean and get dependencies
+# 2️⃣ Clean and get dependencies
 flutter clean
 flutter pub get
 
-# 3. Run on a connected device or emulator
+# 3️⃣ Run the app
 flutter run
 
-Features
+```
 
-Email + Age Capture (with validation):
+---
 
-Age is required (16–100).
+## ✨ **Key Features**
 
-Email is optional but validated for format.
+### **1️⃣ Email + Age Capture**
 
-20-Question Quiz:
+- **Required:** Age (validated for 16–100)
+- **Optional:** Email (basic format validation)
+- Stored **in-memory** for simplicity
 
-Likert-scale options mapped to percentages:
+---
 
-Strongly Disagree → 20%
+### **2️⃣ Quiz Experience**
 
-Disagree → 40%
+- **20 questions** with 5-point Likert scale:
+    - Strongly Disagree → **20%**
+    - Disagree → **40%**
+    - Neutral → **60%**
+    - Agree → **80%**
+    - Strongly Agree → **100%**
+- **Smooth navigation** with Next/Previous buttons
+- **Progress indicator** for user clarity
 
-Neutral → 60%
+---
 
-Agree → 80%
+### **3️⃣ Results**
 
-Strongly Agree → 100%
+- **Total Marriage Readiness Score** — average of all 20 responses
+- **Category breakdown**, including:
+    
+    
+    | Category | Question IDs |
+    | --- | --- |
+    | **Career** | Q18 |
+    | **Opportunity** | Q7, Q8, Q10, Q16 |
+    | **Maturity** | Q1, Q2, Q12, Q14 |
+    | **Prevention** | Q3, Q5, Q6, Q9 |
+    | **Age** | Q4, Q15, Q17 |
+    | **Responsibility** | Q11, Q13, Q19 |
+    | **Education** | Q20 |
+- **Encouraging message** personalized to user score
 
-Progress bar and navigation between questions.
+---
 
-Results Screen:
+## 🧩 **Implementation Overview**
 
-Total readiness score (average of all answers).
+### **Folder Structure**
 
-Category breakdown with percentages and progress bars.
-
-A short encouraging message based on the score.
-
-State Reset:
-
-Retake option clears answers and restarts the quiz.
-
-Implementation Overview
-State Management
-
-Riverpod for reactive, testable state.
-
-Two providers:
-
-quizProvider → Stores answers (questionId → choice) and computes scores.
-
-userInfoProvider → Stores age and optional email.
-
-Scoring Logic
-
-computeResult() in quiz_state.dart:
-
-Averages all 20 responses for total readiness score.
-
-Groups answers by category for the breakdown:
-
-Category	Questions
-Career	Q18
-Opportunity	Q7, Q8, Q10, Q16
-Maturity	Q1, Q2, Q12, Q14
-Prevention	Q3, Q5, Q6, Q9
-Age	Q4, Q15, Q17
-Responsibility	Q11, Q13, Q19
-Education	Q20
-Architecture
+```
 lib/
-  core/           # Themes, constants
-  data/           # Models, questions
-  features/       # Screens: intake, quiz, results
-  state/          # Riverpod providers and logic
-  app.dart        # App routes and setup
+  core/           # Theme, constants
+  data/           # Models, question set
+  state/          # Riverpod providers, business logic
+  features/       # Intake, Quiz, Results screens
+  app.dart        # Routes and MaterialApp setup
   main.dart       # Entry point
 
-Design Choices
+```
 
-Riverpod for simplicity and scalability.
+---
 
-Material 3 UI for a clean, readable design without heavy styling.
+### **State Management**
 
-Modular folder structure for maintainability and easy future expansion (e.g., persistence, analytics, localization).
+- **Riverpod** ensures:
+    - Lightweight, reactive state
+    - Easy scalability for persistence or analytics later
+- **Providers**:
+    - `quizProvider` — Tracks answers and calculates scores
+    - `userInfoProvider` — Stores intake data (age/email)
 
-Clean, readable code with small, meaningful functions and comments where needed.
+---
 
-Known Limitations
+### **Scoring Logic**
 
-Data is in-memory only — no Firebase or persistent storage (optional per requirements).
+- Implemented in `computeResult()`:
+    - **Total Score** = average of all 20 mapped values
+    - **Category Score** = average of mapped answers by group
+- Fully modular to allow category updates without touching logic elsewhere.
 
-Basic validation only for intake fields.
+---
 
-No offline support or analytics.
+## 🎨 **Design Decisions**
 
-Extra Efforts
+- **Material 3 UI** for modern, clean design
+- **Intake before quiz** to reduce user drop-off and allow future analytics
+- **Modular architecture** for maintainability and ease of scaling
+- **Readable code** with small, focused functions and clear naming conventions
 
-Clean architecture and separation of concerns for maintainability.
+---
 
-User-friendly validation and progress feedback.
+## ⚡ **Extra Efforts**
 
-Encouraging message on results for better user engagement.
+- Added input validation for better UX
+- Smooth navigation and progress indicators for clarity
+- Encouraging message on results for a more human feel
+- Well-documented and logically organized code for easy collaboration
 
-Demo
+---
 
-Watch the full walkthrough here:
-Loom Video Link
+## 🎥 **Demo Video**
 
-Next Steps (Future Enhancements)
+Watch the walkthrough here:
 
-Add persistent storage with Firebase or local DB.
+> ▶ Loom Video Demo (Replace with your Loom link)
+> 
 
-Integrate analytics for user behavior tracking.
+---
 
-Add multi-language support.
+## 🔮 **Future Enhancements**
 
-Include a chart visualization for breakdown scores.
+- 🔐 **Data persistence** (Firebase or local DB)
+- 📊 **Chart visualizations** for category scores
+- 🌐 **Multi-language support**
+- 📈 **Analytics integration** for insights
+
+---
+
+## 🤝 **Acknowledgements**
+
+Thanks to the reviewing team for this opportunity — I’ve kept the code clean, scalable, and ready for future iterations while staying within the MVP scope and time constraints.
