@@ -41,7 +41,7 @@ The build focuses on **simplicity**, **clean architecture**, and **future scalab
 
 ```bash
 # 1️⃣ Clone the private repository
-git clone <PRIVATE_REPO_URL>
+git clone <https://github.com/brunhild912/Flutter-Projects.git>
 cd marriage_ready_quiz
 
 # 2️⃣ Clean and get dependencies
@@ -156,7 +156,7 @@ lib/
 
 Watch the walkthrough here:
 
-> ▶ Loom Video Demo (Replace with your Loom link)
+> ▶ Loom Video Demo https://www.loom.com/share/1f27b0228b2d402c9f1dcb58f97285c8?sid=d5362df0-540d-488e-a93e-223bd089690b
 > 
 
 ---
